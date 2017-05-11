@@ -1,4 +1,5 @@
 class Character < ApplicationRecord
+  belongs_to(:actor, :class_name => "Actor", :foreign_key => "actor_id")
 
 #  - movie_id: must be present
 validates :movie_id, :presence => true

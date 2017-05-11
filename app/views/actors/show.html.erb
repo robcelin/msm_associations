@@ -48,9 +48,9 @@
             Movie
           </label>
 
-        <%= select_tag(:movie_id, options_from_collection_for_select(Movie.all, :id, :title, @character.movie_id), :class => "form-control")%>
+          <%= select_tag(:movie_id, options_from_collection_for_select(Movie.all, :id, :title, @character.movie_id), :class => "form-control")%>
+          <div><a href="/movies/new">or add a new movie</a></div>
         </div>
-<div><a href="/movies/new">or add a new movie</a></div>
         <!-- Label and input for name -->
         <div class="form-group">
           <label for="name" class="control-label">
@@ -68,6 +68,7 @@
       </form>
     </div>
   </div>
+
 
     </dl>
 
