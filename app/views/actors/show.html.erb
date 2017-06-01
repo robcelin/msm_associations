@@ -26,6 +26,12 @@
         <% end %>
       </ul>
 
+
+      <dt>Filmography</dt>
+        <% Movie.where(:actor_id => @actor.id).each do |movie| %>
+        <li> <a href = "/movies/<%= movie.id %>"><%= movie.title %> </a></li>
+      <% end %>
+
       <dt>Add a new character</dt>
 <dd>
 
